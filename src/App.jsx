@@ -5,7 +5,7 @@ import React, { useMemo, useState } from "react";
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
-export default function SyncedRGL() {
+export default function App() {
   const [items, setItems] = useState(["0", "1", "2", "3", "4", "5"]);
 
   const layouts = useMemo(() => {
