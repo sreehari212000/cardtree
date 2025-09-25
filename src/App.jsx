@@ -11,7 +11,7 @@ export default function App() {
   const layouts = useMemo(() => {
     const webLayout = items.map((id, idx) => ({
       i: id,
-      x: idx, // horizontal for web
+      x: idx, 
       y: 0,
       w: 1,
       h: 1
@@ -19,7 +19,7 @@ export default function App() {
 
     const mobileLayout = items.map((id, idx) => ({
       i: id,
-      x: 0,   // vertical for mobile
+      x: 0,  
       y: idx,
       w: 1,
       h: 1
@@ -28,13 +28,6 @@ export default function App() {
     return { lg: webLayout, sm: mobileLayout };
   }, [items]);
 
-  // const handleLayoutChange = (current, allLayouts) => {
-  //   const active = Object.values(allLayouts)[0] 
-  //   const sorted = [...active].sort((a, b) =>
-  //     a.y === b.y ? a.x - b.x : a.y - b.y
-  //   );
-  //   setItems(sorted.map((l) => l.i));
-  // };
   const handleLayoutChange = (current, allLayouts) => {
     // Detect active layout (mobile or web)
     let activeLayout = current;
